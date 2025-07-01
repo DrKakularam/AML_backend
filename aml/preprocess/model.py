@@ -97,7 +97,7 @@ def load_model_gcs() -> tf.keras.Model:
     bucket_name = BUCKET_NAME
     models_dir = "models"
     client = storage.Client()
-    bucket = client.get_bucket(bucket_name)
+    bucket = client.get_bucket(BUCKET_NAME)
     blobs = list(bucket.list_blobs(prefix=models_dir))
     model_blobs = [blob for blob in blobs if blob.name.endswith('.keras')]
 
