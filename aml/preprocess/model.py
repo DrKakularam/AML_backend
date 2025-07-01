@@ -99,7 +99,8 @@ def load_model_gcs() -> tf.keras.Model:
     client = storage.Client()
     bucket = client.get_bucket(bucket_name)
     blobs = list(bucket.list_blobs(prefix=models_dir))
-    model_blobs = [blob for blob in blobs if blob.name.endswith('.h5')]
+    model_blobs = [blob for blob in blobs if blob.name.endswith('.keras')]
+
     try:
         latest_blob = max(model_blobs, key=lambda b: b.updated)
         gcs_model_path = f"gs://{bucket_name}/{latest_blob.name}"
