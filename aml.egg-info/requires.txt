@@ -1,0 +1,6 @@
+tensorflow==2.16.2
+tensorflow-io-gcs-filesystem==0.37.1
+pandas
+pillow
+uvicorn
+fastapi

@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: aml
+Version: 0.0.1
+Summary: aml_prediction
+Author: Dr Kakularam
+License: MIT
+Requires-Dist: tensorflow==2.16.2
+Requires-Dist: tensorflow-io-gcs-filesystem==0.37.1
+Requires-Dist: pandas
+Requires-Dist: pillow
+Requires-Dist: uvicorn
+Requires-Dist: fastapi
+Dynamic: author
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
